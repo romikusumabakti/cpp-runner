@@ -1,14 +1,17 @@
-# c-runner README
+# C Runner
 
-C code quick runner. Compile and run code in one click.
+Compile and run C code in one click.
+
+## Recommended by PUB Education Division
+
+This extension is highly recommended especially for beginners who want to learn C.
 
 ## Features
 
 - No configuration
 - Autopause console
-- Show error
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Showing all error
+- Autoset current working directory
 
 For example if there is an image subfolder under your extension project workspace:
 

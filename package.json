@@ -1,12 +1,33 @@
 {
   "name": "c-runner",
-	"displayName": "C Runner",
-	"description": "Run C code",
+	"displayName": "C Runner by Divdik PUB",
+	"description": "Compile and run C code in one click.",
 	"version": "0.0.1",
+	"publisher": "divdik-pub",
+    "author": {
+        "name": "Romi Kusuma Bakti"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/romikusumabakti/c-runner",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/romikusumabakti/c-runner"
+    },
+    "bugs": {
+        "url": "https://github.com/romikusumabakti/c-runner/issues"
+    },
+	"icon": "icon.png",
 	"engines": {
 		"vscode": "^1.63.0"
 	},
+    "keywords": [
+        "c",
+		"run",
+        "divdik",
+		"pub"
+    ],
 	"categories": [
+        "Programming Languages",
 		"Other"
 	],
 	"activationEvents": [
