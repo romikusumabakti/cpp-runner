@@ -1,122 +1,122 @@
 {
   "name": "c-runner",
-	"displayName": "C Runner by Divdik PUB",
-	"description": "Compile and run C code in one click.",
-	"version": "0.0.1",
-	"publisher": "divdikpub",
-    "author": {
-        "name": "Romi Kusuma Bakti"
-    },
-    "license": "MIT",
-    "homepage": "https://github.com/romikusumabakti/c-runner",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/romikusumabakti/c-runner"
-    },
-    "bugs": {
-        "url": "https://github.com/romikusumabakti/c-runner/issues"
-    },
-	"icon": "icon.png",
-	"engines": {
-		"vscode": "^1.63.0"
-	},
-    "keywords": [
-        "c",
-		"run",
-        "divdik",
-		"pub"
+  "displayName": "C Runner by Divdik PUB",
+  "description": "Compile and run C code in one click.",
+  "version": "0.1.0",
+  "publisher": "divdikpub",
+  "author": {
+    "name": "Romi Kusuma Bakti"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/romikusumabakti/c-runner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romikusumabakti/c-runner"
+  },
+  "bugs": {
+    "url": "https://github.com/romikusumabakti/c-runner/issues"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "keywords": [
+    "c",
+    "run",
+    "divdik",
+    "pub"
+  ],
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:c-runner.run"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "c-runner.run",
+        "title": "Run",
+        "icon": "$(debug-start)"
+      },
+      {
+        "command": "c-runner.restart",
+        "title": "Restart",
+        "icon": "$(debug-restart)"
+      },
+      {
+        "command": "c-runner.stop",
+        "title": "Stop",
+        "icon": "$(debug-stop)"
+      }
     ],
-	"categories": [
-        "Programming Languages",
-		"Other"
-	],
-	"activationEvents": [
-        "onCommand:c-runner.run"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "c-runner.run",
-				"title": "Run",
-				"icon": "$(debug-start)"
-			},
-			{
-				"command": "c-runner.restart",
-				"title": "Restart",
-				"icon": "$(debug-restart)"
-			},
-			{
-				"command": "c-runner.stop",
-				"title": "Stop",
-				"icon": "$(debug-stop)"
-			}
-		],
-		"keybindings": [
-			{
-				"command": "c-runner.run",
-				"when": "editorLangId == c && !c-runner.running",
-				"key": "f5"
-			},
-			{
-				"command": "c-runner.restart",
-				"when": "editorLangId == c && c-runner.running",
-				"key": "f5"
-			}
-		],
-		"menus": {
-			"editor/title/run": [
-				{
-					"command": "c-runner.run",
-					"when": "editorLangId == c && !c-runner.running"
-				},
-				{
-					"command": "c-runner.restart",
-					"when": "editorLangId == c && c-runner.running"
-				},
-				{
-					"command": "c-runner.stop",
-					"when": "editorLangId == c && c-runner.running"
-				}
-			],
-			"editor/context": [
-				{
-					"command": "c-runner.run",
-					"when": "editorLangId == c && !c-runner.running",
-					"group": "navigation"
-				},
-				{
-					"command": "c-runner.restart",
-					"when": "editorLangId == c && c-runner.running",
-					"group": "navigation"
-				},
-				{
-					"command": "c-runner.stop",
-					"when": "editorLangId == c && c-runner.running",
-					"group": "navigation"
-				}
-			]
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.63.0",
-		"@types/glob": "^7.1.4",
-		"@types/mocha": "^9.0.0",
-		"@types/node": "14.x",
-		"@typescript-eslint/eslint-plugin": "^5.1.0",
-		"@typescript-eslint/parser": "^5.1.0",
-		"eslint": "^8.1.0",
-		"glob": "^7.1.7",
-		"mocha": "^9.1.3",
-		"typescript": "^4.4.4",
-		"@vscode/test-electron": "^1.6.2"
-	}
+    "keybindings": [
+      {
+        "command": "c-runner.run",
+        "when": "editorLangId == c && !c-runner.running",
+        "key": "f5"
+      },
+      {
+        "command": "c-runner.restart",
+        "when": "editorLangId == c && c-runner.running",
+        "key": "f5"
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+        {
+          "command": "c-runner.run",
+          "when": "editorLangId == c && !c-runner.running"
+        },
+        {
+          "command": "c-runner.restart",
+          "when": "editorLangId == c && c-runner.running"
+        },
+        {
+          "command": "c-runner.stop",
+          "when": "editorLangId == c && c-runner.running"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "c-runner.run",
+          "when": "editorLangId == c && !c-runner.running",
+          "group": "navigation"
+        },
+        {
+          "command": "c-runner.restart",
+          "when": "editorLangId == c && c-runner.running",
+          "group": "navigation"
+        },
+        {
+          "command": "c-runner.stop",
+          "when": "editorLangId == c && c-runner.running",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.63.0",
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.1.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4",
+    "@vscode/test-electron": "^1.6.2"
+  }
 }
