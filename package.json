@@ -2,7 +2,7 @@
   "name": "c-runner",
   "displayName": "C Runner by Divdik PUB",
   "description": "Compile and run C code in one click.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "divdikpub",
   "author": {
     "name": "Romi Kusuma Bakti"
