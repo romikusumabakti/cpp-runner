@@ -13,6 +13,9 @@ This extension is highly recommended especially for beginners who want to learn 
 - Showing all error
 - Autoset current working directory
 
+## How to use
+Make sure you have .c file open. Click green play icon button in right side of title bar, or right click in the editor and select "Run", or press "F5", these will compile and run the file.
+
 For example if there is an image subfolder under your extension project workspace:
 
 \!\[feature X\]\(images/feature-x.png\)
