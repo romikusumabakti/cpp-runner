@@ -3,7 +3,7 @@
 	"displayName": "C Runner by Divdik PUB",
 	"description": "Compile and run C code in one click.",
 	"version": "0.0.1",
-	"publisher": "divdik-pub",
+	"publisher": "divdikpub",
     "author": {
         "name": "Romi Kusuma Bakti"
     },
@@ -38,13 +38,29 @@
 		"commands": [
 			{
 				"command": "c-runner.run",
-				"title": "Run"
+				"title": "Run",
+				"icon": "$(debug-start)"
+			},
+			{
+				"command": "c-runner.restart",
+				"title": "Restart",
+				"icon": "$(debug-restart)"
+			},
+			{
+				"command": "c-runner.stop",
+				"title": "Stop",
+				"icon": "$(debug-stop)"
 			}
 		],
 		"keybindings": [
 			{
 				"command": "c-runner.run",
 				"when": "editorLangId == c && !c-runner.running",
+				"key": "f5"
+			},
+			{
+				"command": "c-runner.restart",
+				"when": "editorLangId == c && c-runner.running",
 				"key": "f5"
 			}
 		],
@@ -53,12 +69,30 @@
 				{
 					"command": "c-runner.run",
 					"when": "editorLangId == c && !c-runner.running"
+				},
+				{
+					"command": "c-runner.restart",
+					"when": "editorLangId == c && c-runner.running"
+				},
+				{
+					"command": "c-runner.stop",
+					"when": "editorLangId == c && c-runner.running"
 				}
 			],
 			"editor/context": [
 				{
 					"command": "c-runner.run",
 					"when": "editorLangId == c && !c-runner.running",
+					"group": "navigation"
+				},
+				{
+					"command": "c-runner.restart",
+					"when": "editorLangId == c && c-runner.running",
+					"group": "navigation"
+				},
+				{
+					"command": "c-runner.stop",
+					"when": "editorLangId == c && c-runner.running",
 					"group": "navigation"
 				}
 			]
