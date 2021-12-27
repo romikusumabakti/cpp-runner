@@ -1,10 +1,10 @@
-# C Runner
+# C/C++ Runner
 
-Compile and run C code in one click.
+Compile and run C/C++ code in one click.
 
 ## Recommended by PUB Education Division
 
-This extension is highly recommended especially for beginners who want to learn C.
+This extension is highly recommended especially for beginners who want to learn C/C++.
 
 ## Features
 

@@ -1,20 +1,20 @@
 {
-  "name": "c-runner",
-  "displayName": "C Runner by Divdik PUB",
-  "description": "Compile and run C code in one click.",
+  "name": "cpp-runner",
+  "displayName": "C/C++ Runner by Divdik PUB",
+  "description": "Compile and run C/C++ code in one click.",
   "version": "0.1.1",
   "publisher": "divdikpub",
   "author": {
     "name": "Romi Kusuma Bakti"
   },
   "license": "MIT",
-  "homepage": "https://github.com/romikusumabakti/c-runner",
+  "homepage": "https://github.com/romikusumabakti/cpp-runner",
   "repository": {
     "type": "git",
-    "url": "https://github.com/romikusumabakti/c-runner"
+    "url": "https://github.com/romikusumabakti/cpp-runner"
   },
   "bugs": {
-    "url": "https://github.com/romikusumabakti/c-runner/issues"
+    "url": "https://github.com/romikusumabakti/cpp-runner/issues"
   },
   "icon": "icon.png",
   "engines": {
@@ -22,6 +22,7 @@
   },
   "keywords": [
     "c",
+    "cpp",
     "run",
     "divdik",
     "pub"
@@ -31,68 +32,68 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:c-runner.run"
+    "onCommand:cpp-runner.run"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "c-runner.run",
+        "command": "cpp-runner.run",
         "title": "Run",
         "icon": "$(debug-start)"
       },
       {
-        "command": "c-runner.restart",
+        "command": "cpp-runner.restart",
         "title": "Restart",
         "icon": "$(debug-restart)"
       },
       {
-        "command": "c-runner.stop",
+        "command": "cpp-runner.stop",
         "title": "Stop",
         "icon": "$(debug-stop)"
       }
     ],
     "keybindings": [
       {
-        "command": "c-runner.run",
-        "when": "editorLangId == c && !c-runner.running",
+        "command": "cpp-runner.run",
+        "when": "!cpp-runner.running",
         "key": "f5"
       },
       {
-        "command": "c-runner.restart",
-        "when": "editorLangId == c && c-runner.running",
+        "command": "cpp-runner.restart",
+        "when": "cpp-runner.running",
         "key": "f5"
       }
     ],
     "menus": {
       "editor/title/run": [
         {
-          "command": "c-runner.run",
-          "when": "editorLangId == c && !c-runner.running"
+          "command": "cpp-runner.run",
+          "when": "editorLangId =~ /(c|cpp)/ && !cpp-runner.running"
         },
         {
-          "command": "c-runner.restart",
-          "when": "editorLangId == c && c-runner.running"
+          "command": "cpp-runner.restart",
+          "when": "editorLangId =~ /(c|cpp)/ && cpp-runner.running"
         },
         {
-          "command": "c-runner.stop",
-          "when": "editorLangId == c && c-runner.running"
+          "command": "cpp-runner.stop",
+          "when": "editorLangId =~ /(c|cpp)/ && cpp-runner.running"
         }
       ],
       "editor/context": [
         {
-          "command": "c-runner.run",
-          "when": "editorLangId == c && !c-runner.running",
+          "command": "cpp-runner.run",
+          "when": "editorLangId =~ /(c|cpp)/ && !cpp-runner.running",
           "group": "navigation"
         },
         {
-          "command": "c-runner.restart",
-          "when": "editorLangId == c && c-runner.running",
+          "command": "cpp-runner.restart",
+          "when": "editorLangId =~ /(c|cpp)/ && cpp-runner.running",
           "group": "navigation"
         },
         {
-          "command": "c-runner.stop",
-          "when": "editorLangId == c && c-runner.running",
+          "command": "cpp-runner.stop",
+          "when": "editorLangId =~ /(c|cpp)/ && cpp-runner.running",
           "group": "navigation"
         }
       ]
